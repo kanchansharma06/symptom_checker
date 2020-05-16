@@ -1,0 +1,54 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Symptom Checker</title>
+
+
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid" style="height:auto;">
+        <div>
+            {% if messages %}
+                    {% for message in messages%}
+            <div class="alert alert-danger" style="width:100%;text-align:center">{{message}}<span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-left: 15px;color: white;font-weight: bold;float: right;font-size: 22px;line-height: 20px;cursor: pointer;transition: 0.3s;}
+">&times;</span></div>
+
+                    {% endfor%}
+            {% endif %}
+                </div>
+        <div class="row" style="margin-top:1%;margin-bottom:40px;">
+           <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+
+                <div class="login__form1"  style="background: rgba(0, 0, 0, 0.2);border-radius:20px;height:370px;margin-top:20px;">
+                    <h2 id="loghead">Log In</h2>
+                    <form action='login' method="post" autocomplete="off"  class="log__form1" >
+                                 {% csrf_token %}
+                            <input type="text" id="user" name="username" placeholder="User Name" class="logid"   required style="height:50px;width:300px;border:inset;border-radius:10px;margin-bottom:10px;margin-top:15px;"><br>
+                            <input type="password" id="pword" name="password" placeholder="Password" class="logpass2" required  style="height:50px;width:300px;border:inset;border-radius:10px;margin-top:15px;"><br>
+
+<input type="checkbox" onclick="myFunction()">Show Password
+                        <input type="Submit" value="Log In" id ='sub' style="margin-top:20px"> <br>
+                        <p style="font-size:14px;margin-left:8%;margin-top:10px;">New To Sympchec?<a href="registration.html">Create Account</a></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function myFunction() {
+  var x = document.getElementById("pword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+{% endblock %}
+</body>
+</html>

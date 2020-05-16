@@ -1,0 +1,44 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+
+</head>
+
+<body>
+{% block content %}
+<div class="container-fluid" id="startcont">
+    <div class="row">
+
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="startback">
+            <h2>Select A Way Of Diagnosis</h2>
+
+
+<div class="card1" >
+
+  <img src="static/img/bodypart.png"  class="card1img">
+    <div class="card3"><a href="bodyloc.html"><h3>Selecting Body Parts</h3></a></div>
+
+</div>
+
+<div class="card2" >
+  <img src="static/img/symptom.png"  class="card2img">
+    <div class="card3"><a href="medicaldiag.html"><h3>Selecting Symptoms</h3></a></div>
+
+</div>
+
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

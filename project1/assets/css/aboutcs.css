@@ -1,0 +1,15 @@
+.heading{
+margin-left:45%;
+}
+.about_img
+{
+height:100%;width:100%;margin:20px;margin-top:35px;
+
+}
+.about_text{
+font-size:18px;color:#808080;padding-top:20px;padding-bottom:20px;
+}
+.about_back{
+border:solid;
+border-radius:15px;margin-bottom:25px;
+}

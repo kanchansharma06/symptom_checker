@@ -1,0 +1,103 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Symptom Checker</title>
+
+
+</head>
+
+<body>
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+            <div class="covid_nav">
+                <a href="covid19.html" class="active1">
+                    OVERVIEW
+                </a>
+                <a href="symptoms.html">
+                    SYMPTOMS
+                </a>
+                <a href="prevention.html" >
+                    PREVENTION
+                </a>
+                <a href="treatment.html" >
+                    TREATMENT
+                </a>
+            </div>
+            <div class="covid_text">
+
+                    <b>*</b> The outbreak of Coronavirus disease first surfaced in Wuhan, China – a city with a &nbsp;&nbsp;population of over 11 million.<br>
+                    <b>*</b>The Huanan Seafood Wholesale in this city was found to be the epicenter. It is the local wet &nbsp;&nbsp;market where animals such as bats, snakes, etc. are sold.<br>
+
+                    <b>*</b>After the outbreak, the market was shut down on 1st January 2020, and China imposed a &nbsp;&nbsp;nationwide ban on buying and selling of wild animals in the markets, restaurants and retail &nbsp;&nbsp;places.<br>
+
+                    <b>*</b>Coronavirus disease or COVID-19 is caused by a type of virus called Coronavirus. It is called &nbsp;&nbsp;Corona because of the presence of crown-like spikes on their surfaces and affects the &nbsp;&nbsp;human lungs.<br>
+                    <b>*</b>It is known to be transferred from animals to humans. Other similarly spreading diseases &nbsp;&nbsp;were SARS in 2002 and MERS in 2012.<br>
+
+                    <b>*</b>On 31st December 2019, WHO was notified about pneumonia of unknown causes, but later &nbsp;&nbsp;they found out that Coronavirus was the main cause.<br>
+                <b>*</b>Since the beginning, there have been over 1,430,000 positive cases from almost every &nbsp;&nbsp;country in the world. (Worldometers)<br>
+
+
+                    <b>*</b>Some of the worst-hit nations include China, USA, Italy, Iran, Spain & UK. (Aljazeera)<br>
+
+                    <b>*</b>The outbreak was declared a Public Health Emergency of International Concern on 30th &nbsp;&nbsp;January 2020.<br>
+                    <b>*</b>WHO on March 11, 2020, declared COVID -19 a pandemic
+
+                            <hr style="border-top: 2px solid;">
+                <h3>How it spreads</h3>
+                <h4> <u>Person-to-person spread</u></h4>
+                It is one of the main sources of transmission for Coronavirus. Being highly contagious the virus spreads easily and sustainably in the community.
+                <h4><u>People in close contact</u></h4>
+                The rate of transmission is also high when the affected person is in close contact (within 6 feet) with one another. A person can also get this virus through respiratory droplets produced from the infected person when he coughs or sneezes. These droplets can be inhaled via the nose or mouth into the lungs of the people standing nearby.
+                <h4> <u>Spread via contaminated surfaces</u></h4>
+                There is also a good chance for you to contract the virus by touching any surface or objects the virus has on it. Generally, after touching these objects, people tend to touch their own nose, mouths and even eyes which make it easy for the virus to enter the unaffected individual’s body. Though, it is not the main cause of Coronavirus transmission
+                <hr style="border-top: 2px solid;">
+                <div class="covid-box2">
+                    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                        <i class="fa fa-globe" style="padding-left:20px;margin-right:5px;color:blue"></i>
+                          Learn more on who.int
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+
+            <div class="covid_info">
+
+                <h2 style="padding-left:5px">Help And Information </h2>
+                <hr style="border-top: 2px solid;">
+                <h3 style="padding-left:5px">COVID-19 | MyGov.in</h3>
+                <div class="covid-box">
+                    <i class="fa fa-globe" style="color:blue"></i>
+                    <a href="https://www.mygov.in/covid-19/?cbps=1">mygov.in</a>
+                </div>
+
+                </h3>
+
+
+                <hr style="border-top: 2px solid;">
+                <h3 style="padding-left:5px">Coronavirus information - India</h3>
+                <h5 style="padding-left:5px">Ministry of Health and Family Welfare, Govt. of India</h5>
+                <div class="covid-box1">
+                    <i class="fa fa-globe" style="color:blue"></i><a href="https://www.mohfw.gov.in">mohfw.gov.in</a>
+                </div>
+            </div>
+            <div>
+                <div class="worlddata" style="float:left;margin-left:10%;margin-top:5%">
+                    <a href="covidworld.html" style="position:relative;display:inline-block;padding:8px 25px;margin:10px;color:white;background:black;border-radius:40px;font-size:18px;text-decoration:none;Letter-spacong:2px;overflow:hidden;">Covid-19 WorldWide </a>
+                </div><br>
+
+                 </div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+</body>
+</html>

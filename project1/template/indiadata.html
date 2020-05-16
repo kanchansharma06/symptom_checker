@@ -1,0 +1,111 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Symptom Checker</title>
+
+
+</head>
+
+<body>
+
+{% block content %}
+<div class="container-fluid" id="india"  style="height:auto;margin-bottom:10px;" >
+
+    <div class="row">
+        <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8" >
+            <div class="headdata"  style="text-align:right;color:black">COVID-19 Update
+                <img src="static/img/india.png" style="widht:50px;height:50px;border-radius:25px;"></div>
+
+
+
+        </div>
+        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+            <div class="statedata" style="float:right;margin:15px 15px 0px 0px">
+                <a href="covidstate.html" style="position:relative;display:inline-block;padding:8px 25px;color:black;background:black;border-radius:40px;font-size:20px;text-decoration:none;overflow:hidden;color:white"><b>Covid-19 India State </b></a>
+                </div>
+
+        </div>
+
+    </div>
+    <div class="row" >
+        <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
+        <canvas id="inddat" height="35" width="100"></canvas>
+        </div>
+
+    </div>
+
+    <div class="row">
+          <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white;margin-left:17%;margin-bottom:25px;margin-top:25px;">
+            <tr >
+                <td colspan="2" style="width:300px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>TOTAL CASES</b><br>{{totalconfirmed}}</td>
+                <td colspan="2" style="width:300px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>TOTAL RECOVERED</b><br>{{totalrecovered}}</td>
+                <td colspan="2" style="width:300px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>Total Death</b><br>{{totaldeath}}</td>
+            </tr>
+          </table>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white;margin-left:16.3%">
+
+                <tr>
+                <th style="width:150px;text-align:center;">Date</th>
+                <th style="width:150px;text-align:center;">Total Cases</th>
+                <th style="width:150px;text-align:center;">Total Recovered</th>
+                <th style="width:150px;text-align:center;">Total Death</th>
+                <th style="width:150px;text-align:center;">Daily Cases</th>
+                <th style="width:150px;text-align:center;">Daily Recovered</th>
+            </tr>
+            {% for i in dict%}
+            <tr>
+            {% for j in i%}
+
+                <th style="text-align:center;">{{j}}</th>
+            {% endfor%}
+            </tr>
+            {% endfor%}
+
+        </table>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+<script type="text/javascript">
+
+                const ctx =document.getElementById('inddat').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'line',
+                    data:{
+                        labels: [{% for i in dictl9%}'{{i}}',{% endfor %}],
+                          datasets: [
+                                                    {
+                                                        label: 'India Covid-19 Daily Cases',
+
+                                                        backgroundColor:"rgba(255,255,255,.4)",
+                                                         borderColor:"rgba(10,192,192,1)",
+                                                         data: [{% for i in dictl8%}{{i}},{% endfor %}],
+                                                         borderWidth:2,
+                                                    }]
+                                 }
+
+                     });
+
+</script>
+
+
+
+{% endblock %}
+</body>
+</html>

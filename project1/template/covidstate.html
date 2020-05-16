@@ -1,0 +1,149 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Symptom Checker</title>
+</head>
+<body>
+{% block content%}
+<div class="container-fluid"  >
+
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" >
+            <div class="headdata1"  style="color:black">COVID-19 India State Update</div>
+
+        </div>
+
+    </div>
+     <div class="row"  style="height:500px;">
+        <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2"></div>
+        <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="height:400px;">
+        <canvas id="mincase" width="100" height="127.5"></canvas>
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" style="height:400px;">
+        <canvas id="maxcase" width="100" height="100"></canvas>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-lg-2 col-md-2"></div>
+    </div>
+
+    <div class="row" style="margin-top:3%;margin-bottom:3%;">
+
+
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin-left:5%">
+            <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white">
+            <tr>
+                <th style="width:180px;text-align:center;">State</th>
+                <th style="width:180px;text-align:center;">Total Cases</th>
+                <th style="width:180px;text-align:center;">Total Active Cases</th>
+                <th style="width:180px;text-align:center;">Total Death</th>
+                <th style="width:180px;text-align:center;">Total Recovered</th>
+                <th style="width:180px;text-align:center;">Last Update Date</th>
+            </tr>
+            {% for i in dict%}
+            <tr>
+            {% for j in i%}
+
+                <th style="text-align:center;">{{j}}</th>
+            {% endfor%}
+            </tr>
+            {% endfor%}
+
+        </table>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+<script>
+
+var ctx = document.getElementById('mincase').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for item in dictmn%}'{{item}}',{% endfor %}],
+        datasets: [{
+            label: 'States With Minimum Covid-19 Case',
+            data: [{% for item in dictmn1%}{{item}},{% endfor %}],
+            backgroundColor: [
+            {% for item in dictmn1 %}
+                'rgba(192,192,192, 1)',
+                {% endfor %}
+            ],
+            borderColor: [
+            {% for item in dictmn1 %}
+                'rgba(192, 192,192, 1)',
+                {% endfor %}
+
+            ],
+            borderWidth: 1,
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+<script>
+
+var ctx = document.getElementById('maxcase').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for i in dictmx%}'{{i}}',{% endfor %}],
+        datasets: [{
+            label: 'States With Maximum Covid-19 Case',
+            data: [{% for i in dictmx1%}{{i}},{% endfor %}],
+            backgroundColor: [
+            {% for item in dictmx1 %}
+                'rgba(255,0,0, 0.8)',
+                {% endfor %}
+            ],
+            borderColor: [
+            {% for item in dictmx1 %}
+                'rgba(255, 0, 0, 1)',
+                {% endfor %}
+
+            ],
+            borderWidth: .2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+
+{% endblock %}
+
+</body>
+</html>

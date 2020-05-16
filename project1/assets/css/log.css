@@ -1,0 +1,117 @@
+
+.login__form1{top:50px;
+width:400px;height:290px;position:relative;margin:6% auto;
+background-color:white;padding:5px;background: rgba(255, 255, 255, 0.5); font-size:20px;}
+.log__form1{
+top:80px;position:absolute;
+width:280px;padding-left:10%;
+
+}
+
+#loghead{
+text-align:center;}
+.registration_text{
+background: rgba(255, 255, 255, 0.5); font-size:20px;padding-left:3%}
+#fname{
+height:40px;width:90%;border-radius:12px;margin-bottom:5px;
+}
+#lname{
+height:40px;width:90%;border-radius:12px;margin-bottom:5px;
+}
+#email{
+height:40px;width:90%;border-radius:12px;margin-bottom:5px;
+}
+#user{
+height:40px;width:90%;border-radius:12px;margin-bottom:5px;
+}
+#pword{
+height:40px;width:90%;border-radius:12px;margin-bottom:5px;
+}
+#cpword{
+height:40px;width:90%;border-radius:12px;margin-bottom:5px;
+}
+.registration_text1{
+text-align:Left;
+height:50%;width:50%;
+margin-left:25%;padding-top:10px;margin-top:35px;
+}
+.reg_form{
+text-align:Left;
+padding-top:20px;
+font-size:20px;
+
+}
+#sub{
+height:40px;width:30%;border-radius:12px;margin:10px 35px 10px 100px;
+background-color:#4CAF50;color:white;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+}
+#sub1{height:40px;width:30%;border-radius:12px;margin:10px 35px 10px 10px;
+background-color:#4CAF50;color:white;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+}
+#sub2{height:45px;width:15%;border-radius:12px;margin:10px 35px 10px 20px;
+background-color:#4CAF50;color:white;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;}
+#sub:hover {opacity: 0.6}
+.log_head{
+text-align:center;
+font-size:40px;}
+.login_form{
+text-align:center;
+margin-left:35%;
+border:solid;border-radius:10px;
+height:200px;width:400px;
+padding-top:30px;
+
+
+}
+.login_form1{
+border:solid;border-radius:10px;
+height:250px;width:400px;
+text-align:center;
+margin-left:33%;
+margin-bottom:5px;
+
+margin-top:5px;
+}
+.log_form1{
+
+text-align:left;margin-left:15%;
+
+}
+.log_id{
+height:50px;width:300px;border:inset;border-radius:5px;}
+
+.log_pass{
+height:50px;width:300px;border:inset;border-radius:5px;margin-top:5px;margin-bottom:5px;}
+.p1{
+font-size:12px;margin-left:25%;}
+
+
+
+
+#contact_text{top:50px;
+width:50%;height:850px;margin-left:25%;padding:20px;margin-top:10px;border-radius:10px;
+padding:5px;background: rgba(255, 255, 255, 0.2); font-size:20px;
+}
+.fn{
+height:50px;width:95%;border-radius:10px;margin-bottom:10px;margin-top:-10px;font-size:20px;margin-left:20px;}
+.ln{height:50px;width:95%;border-radius:10px;margin-bottom:10px;margin-top:-10px;font-size:20px;margin-left:20px;}
+
+.sub{height:50px;width:95%;border-radius:10px;margin-bottom:10px;margin-top:-10px;font-size:20px;margin-left:20px;}
+.feed{height:200px;width:95%;border-radius:10px;margin-bottom:10px;margin-top:-10px;font-size:20px;margin-left:20px;}
+.headcontact{
+margin-left:35%}

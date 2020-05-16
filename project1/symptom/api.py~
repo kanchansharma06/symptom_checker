@@ -1,0 +1,14 @@
+import requests
+
+url = "https://priaid-symptom-checker-v1.p.rapidapi.com/body/locations"
+
+querystring = {"language":"en-gb"}
+
+headers = {
+    'x-rapidapi-host': "priaid-symptom-checker-v1.p.rapidapi.com",
+    'x-rapidapi-key': "dfdf80a3dfmshfb073c6ed326168p17b2adjsn54bc4bc1da50"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)

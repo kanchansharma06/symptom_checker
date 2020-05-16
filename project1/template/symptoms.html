@@ -1,0 +1,94 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Symptom Checker</title>
+
+</head>
+<body>
+
+    {% block content %}
+    {% csrf_token %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+                <div class="covid_nav">
+                    <a href="covid19.html" >
+                        OVERVIEW
+                    </a>
+                    <a href="symptoms.html" class="active1">
+                        SYMPTOMS
+                    </a>
+                    <a href="prevention.html" >
+                        PREVENTION
+                    </a>
+                    <a href="treatment.html" >
+                        TREATMENT
+                    </a>
+                </div>
+
+                <div class="covid_text">
+                    People may be sick with the virus for 1 to 14 days before developing symptoms. The most common
+                    symptoms of
+                    coronavirus disease (COVID-19) are fever, tiredness, and dry cough. Most people
+                    (about 80%) recover from the disease without needing special treatment.
+                        More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions
+                    (such as asthma, diabetes, or heart disease), may be more vulnerable to becoming severely ill.
+
+                    <hr style="border-top: 2px solid;">
+                    <h3>People may experience:</h3>
+                    • cough<br>
+                    • fever<br>
+                    • tiredness<br>
+                    • difficulty breathing (severe cases)<br>
+                    <p><h5>Note</h5>People with mild symptoms who are otherwise healthy should self-isolate and contact their medical provider or a COVID-19 information line for advice on testing and referral.
+
+People with fever, cough or difficulty breathing should call their doctor and seek medical attention. (WHO)</p>
+
+                    <hr style="border-top: 2px solid;">
+                    <div class="covid-box2">
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+                        <i class="fa fa-globe" style="padding-left:20px;margin-right:5px;color:blue"></i>
+                        Learn more on who.int
+                        </a>
+                    </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+
+            <div class="covid_info">
+                <h2 style="padding-left:5px">Help And Information </h2>
+                <hr style="border-top: 2px solid;">
+                <h3 style="padding-left:5px">COVID-19 | MyGov.in</h3>
+                <div class="covid-box">
+                    <i class="fa fa-globe" style="color:blue"></i>
+                    <a href="https://www.mygov.in/covid-19/?cbps=1">mygov.in</a>
+                </div>
+
+                </h3>
+                <hr style="border-top: 2px solid;">
+                <h3 style="padding-left:5px">Coronavirus information - India</h3>
+                <h5 style="padding-left:5px">Ministry of Health and Family Welfare, Govt. of India</h5>
+                <div class="covid-box1">
+                    <i class="fa fa-globe" style="color:blue"></i><a href="https://www.mohfw.gov.in">mohfw.gov.in</a>
+                </div>
+                <div>
+                    <div class="worlddata" style="float:left;margin-left:10%;margin-top:10%">
+                        <a href="covidworld.html" style="position:relative;display:inline-block;padding:8px 25px;margin:10px;color:white;background:black;border-radius:40px;font-size:18px;text-decoration:none;Letter-spacong:2px;overflow:hidden;">Covid-19 WorldWide </a>
+                    </div><br>
+
+                 </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% endblock %}
+</body>
+</html>

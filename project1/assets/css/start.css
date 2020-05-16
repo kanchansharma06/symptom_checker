@@ -1,0 +1,20 @@
+#startcont{
+height:600px;
+width:100%;
+background-color:	#F8F8FF;
+
+}
+#startback{
+height:600px;background-color:#F0F8FF;border-radius:20px;text-align:center;opacity:.9
+}
+.card1{
+border:solid;border-radius:10px;background-color:black;color:white;width:300px;height:410px;float:left;text-align:center;margin:50px 0px 0px 70px;}
+.card1img{
+width:100%;height:300px}
+.card2{
+border:solid;border-radius:10px;background-color:black;color:white;width:300px;height:410px;float:right;text-align:center;margin:50px 70px 0px 0px;}
+.card2img{
+width:100%;background-color:white;height:300px;}
+.card3{
+width:250px;border-radius:10px;
+height:70px;color:white;background-color:black;margin:30px 0px 20px 20px;}

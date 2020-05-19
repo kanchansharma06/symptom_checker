@@ -12,36 +12,26 @@
 <body>
 
 {% block content %}
-    <div class="slider_area" style="background-image: url('static/img/banner2.png');">
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid" style="background-image:url('static/img/banner2.png');height:auto;width:100%;background-repeat:no-repeat;background-size:cover;background-position: center;" >
+            <div class="row" style="margin-bottom:20%">
                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                     <div class="slider_text ">
-                        
-
-
                         <h3> Medical Diagnosis
                         </h3>
                         <p>In healthcare sector, service excellence is the facility of <br> the hospital as
                             healthcare service provider to consistently.</p>
                         <div class="diagnose">
                             {% if user.is_authenticated %}
-
                             <a href="bodyloc.html">Diagnose Me</a>
-
                             {% else %}
-
                             <a href="login.html.html">Diagnose Me</a>
-
                             {% endif %}
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
 
 
 {% endblock %}

@@ -17,10 +17,8 @@
     <div class="row">
         <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8" >
             <div class="headdata"  style="text-align:right;color:black">COVID-19 Update
-                <img src="static/img/india.png" style="widht:50px;height:50px;border-radius:25px;"></div>
-
-
-
+                <img src="static/img/india.png" style="widht:50px;height:50px;border-radius:25px;">
+            </div>
         </div>
         <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
             <div class="statedata" style="float:right;margin:15px 15px 0px 0px">
@@ -38,26 +36,31 @@
     </div>
 
     <div class="row">
-          <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white;margin-left:17%;margin-bottom:25px;margin-top:25px;">
+        <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2"></div>
+        <div class="col-xs-8 col-lg-8 col-md-8 col-sm-2">
+          <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white;margin-bottom:25px;margin-top:25px;">
             <tr >
-                <td colspan="2" style="width:300px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>TOTAL CASES</b><br>{{totalconfirmed}}</td>
-                <td colspan="2" style="width:300px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>TOTAL RECOVERED</b><br>{{totalrecovered}}</td>
-                <td colspan="2" style="width:300px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>Total Death</b><br>{{totaldeath}}</td>
+                <td colspan="2" style="width:400px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>TOTAL CASES</b><br>{{totalconfirmed}}</td>
+                <td colspan="2" style="width:400px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>TOTAL RECOVERED</b><br>{{totalrecovered}}</td>
+                <td colspan="2" style="width:400px;text-align:center;background-color:black;color:white;text-align:center;height:100px;font-size:24px;padding-top:20px;opacity:.8;padding-bottom:20px"><b>Total Death</b><br>{{totaldeath}}</td>
             </tr>
           </table>
+        </div>
+        <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2"></div>
 
     </div>
     <div class="row">
-        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
-            <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white;margin-left:16.3%">
+        <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2"></div>
+        <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+            <table border="2px;" style="background-color:black;opacity:.8;color:white;border-color:white;">
 
                 <tr>
-                <th style="width:150px;text-align:center;">Date</th>
-                <th style="width:150px;text-align:center;">Total Cases</th>
-                <th style="width:150px;text-align:center;">Total Recovered</th>
-                <th style="width:150px;text-align:center;">Total Death</th>
-                <th style="width:150px;text-align:center;">Daily Cases</th>
-                <th style="width:150px;text-align:center;">Daily Recovered</th>
+                <th style="width:200px;text-align:center;">Date</th>
+                <th style="width:200px;text-align:center;">Total Cases</th>
+                <th style="width:200px;text-align:center;">Total Recovered</th>
+                <th style="width:200px;text-align:center;">Total Death</th>
+                <th style="width:200px;text-align:center;">Daily Cases</th>
+                <th style="width:200px;text-align:center;">Daily Recovered</th>
             </tr>
             {% for i in dict%}
             <tr>
@@ -72,7 +75,7 @@
 
 
         </div>
-
+        <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2"></div>
 
 
     </div>

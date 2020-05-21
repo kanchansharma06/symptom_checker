@@ -126,7 +126,8 @@
                     <table class="medtab" style="border-radius:0px 0px 10px 10px;background-color:white;width:100%;">
                         <tr>
                             <td style="padding-left:15px;padding-top:10px;"> <label for="yearofbirth" style="font-size:24px;">Enter Your Birth Year</label>
-                                <input type="text" id="yearofbirth" name="yearofbirth" placeholder="Birth Year" style="width:120px;height:50px;border:inset;margin-bottom:15px;border-radius:5px;margin-left:20px;text-align:center" required/>
+                                <input type="text" id="yearofbirth" oninvalid="InvalidMsg(this);"
+                   oninput="InvalidMsg(this);" name="yearofbirth" placeholder="Birth Year"  style="width:120px;height:50px;border:inset;margin-bottom:15px;border-radius:5px;margin-left:20px;text-align:center" required="required"/>
                             </td>
                             <td rowspan="3"><img src="static/img/male1.png" name="bodypic" id="bodypic" style="height:350px;width:350px;" />
                             </td>
@@ -207,7 +208,25 @@ $(function() {
 	document.getElementById('bodypic').src = bodyPics[parseInt(box.value)];
 	}
 </script>
+<script>
+        function InvalidMsg(textbox) {
 
+            if (textbox.value === '') {
+                textbox.setCustomValidity
+                      ('Entering an Birth-Year is necessary!');
+            } else if (textbox.value<1000) {
+                textbox.setCustomValidity
+                      ('Please enter a Birth-Year contain 4-digit number');
+             }else if (textbox.value>2020) {
+                textbox.setCustomValidity
+                      ('Entered Birth-Year is future year.Please enter valid Birth-Year');
+            } else {
+                textbox.setCustomValidity('');
+            }
+
+            return true;
+        }
+    </script>
 
 
   <footer class="footer_top" style="height:auto" >

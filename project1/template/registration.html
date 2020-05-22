@@ -30,13 +30,13 @@
                     <form action='registration' method="post" autocomplete="off" class="reg_form">
                         {% csrf_token %}
                         <label for="fname">First Name</label><br>
-                        <input type="text" id="fname" name="firstname" placeholder="First Name" required style="border-radius:10px;"><br>
+                        <input type="text" id="fname" name="firstname" placeholder="First Name" required style="border-radius:10px;" pattern="[A-Za-z]{1,32}" title="First Name should only contain first letter in uppercase followed by letter lowercase letters. e.g. John"><br>
                         <label for="lname">Last Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
-                        <input type="text" id="lname" name="lastname" placeholder="Last Name" required style="border-radius:10px;"><br>
+                        <input type="text" id="lname" name="lastname" placeholder="Last Name" style="border-radius:10px;" pattern="[A-Za-z]{1,32}" title="Last Name should only contain first letter in uppercase followed by letter lowercase letters. e.g. Sharma"><br>
                         <label for="user">User Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
                         <input type="text" id="user" name="username" placeholder="User Name" required style="border-radius:10px;" pattern="[a-z]{1,15}" title="Username should only contain lowercase letters. e.g. john"><br>
                         <label for="email">Email&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
-                        <input type="email" id="email" name="email" placeholder="Email" required style="border-radius:10px;"><br>
+                        <input type="email" id="email" name="email" placeholder="Email" required style="border-radius:10px;"  title="Email should be like-john@gmail.com"><br>
                         <label for="pword">Password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
                         <input type="password" id="pword" name="password" placeholder="Password" required style="border-radius:10px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
                         <div id="message">
